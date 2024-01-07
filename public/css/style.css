@@ -1,0 +1,76 @@
+*{
+    background-color:  #D2E3C8 ;
+    color: #4F6F52;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-purple {
+    color: #fff;
+    background-color: whitesmoke;
+ }
+
+.btn-whitesmoke:hover {
+    opacity: 0.5;
+    color: white;  
+}
+
+.navbar-brand {
+    color: #4F6F52;
+    font-weight: bold;
+
+}
+
+.border-des{
+    border: 0px solid white ;
+    background-color: white ;
+    border-radius: 20px;
+}
+.nav-color{
+    background-color: rgb(56, 117, 64);
+}
+
+.nav-text-color{
+    color: aliceblue !important;
+}
+
+.content-box{
+    height: 400px;
+}
+
+/* .center-div{
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+} */
+
+.search-bar{
+    border-radius:5px ;
+    background-color: white;
+    border-width: 0rem;
+    height: 50px;
+}
+
+.border-def{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ 
+}
+
+.footer-set{
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.footer-color{
+    background-color: black;
+}
