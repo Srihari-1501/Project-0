@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+// import { dirname } from "path";
+// import { fileURLToPath } from "url";
 
 const app = express();
 const port = 3000;
@@ -11,10 +11,8 @@ var editTit,contEdit,descEdit,searchTit,contSearch,descSearch;
 
 app.use(express.static('public'));
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// const path = __dirname + "/public/images/blogphoto.png";
-// console.log(path)
 
 function linearSearch(arr, item) {
   // Go through all the elements of arr to look for item.
@@ -32,6 +30,18 @@ function linearSearch(arr, item) {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
+  res.render("partials/index.ejs");
+});
+
+app.get("/experiments", (req, res) => {
+  res.render("partials/index.ejs");
+});
+
+app.get("/laws", (req, res) => {
+  res.render("partials/index.ejs");
+});
+
+app.get("/authors", (req, res) => {
   res.render("partials/index.ejs");
 });
 
@@ -133,6 +143,6 @@ app.post('/search', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+    console.log(`Listening on port http://localhost:${port}/`);
     
 });

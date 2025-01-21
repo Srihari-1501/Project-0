@@ -1,9 +1,10 @@
 *{
-    background-color:  #D2E3C8 ;
-    color: #4F6F52;
+    background-color:  black ;
+    color: white;
     font-family: 'Poppins', sans-serif;
 }
-
+/* D2E3C8 */
+/* 4F6F52 */
 .btn-purple {
     color: #fff;
     background-color: whitesmoke;
