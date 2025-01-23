@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/experiments', (req, res) => {
-  res.render('partials/index.ejs');
+  res.render('compose.ejs');
 });
 
 app.get('/laws', (req, res) => {
@@ -64,9 +64,31 @@ app.post('/compose', (req, res) => {
   res.redirect('/post');
 });
 
+app.post('/experiments', (req, res) => {
+  var expTitle = req.body.postTitle;
+  var expContent = req.body.postContent;
+  var expDescr = req.body.postDesc;
+
+  var expObj = {
+    title: expTitle,
+    Description: expDescr,
+    content: expContent,
+  };
+
+  exps.push(expObj);
+
+  res.redirect('/exps');
+});
+
 app.get('/post', (req, res) => {
   res.render('post.ejs', {
-    postOp: posts,
+    postObj: posts,
+  });
+});
+
+app.get('/exps', (req, res) => {
+  res.render('exps.ejs', {
+    expObj: exps,
   });
 });
 
