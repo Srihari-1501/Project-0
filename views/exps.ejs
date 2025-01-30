@@ -98,13 +98,11 @@
   </div>
 
   <script>
-    // Articles Data passed to EJS
     const articles = <%- JSON.stringify(articles) %>;
 
-    // Function to display articles
     function displayArticles(filteredArticles) {
       const container = document.getElementById("article-container");
-      container.innerHTML = ""; // Clear previous content
+      container.innerHTML = "";
 
       if (filteredArticles.length === 0) {
         container.innerHTML = "<p>No articles found!</p>";
@@ -123,15 +121,12 @@
         container.appendChild(articleDiv);
       });
     }
-
-    // Initial display of all articles
     displayArticles(articles);
 
-    // Function to filter articles
     function filterArticles() {
       const tagInput = document.getElementById("tags").value.trim();
       if (!tagInput) {
-        displayArticles(articles); // Show all articles if no input
+        displayArticles(articles);
         return;
       }
 
