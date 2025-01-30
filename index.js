@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { experiments } from './views/utils/experiments.js';
 
 // import { dirname } from "path";
 // import { fileURLToPath } from "url";
@@ -64,21 +65,21 @@ app.post('/compose', (req, res) => {
   res.redirect('/post');
 });
 
-app.post('/experiments', (req, res) => {
-  var expTitle = req.body.postTitle;
-  var expContent = req.body.postContent;
-  var expDescr = req.body.postDesc;
+// app.post('/experiments', (req, res) => {
+//   var expTitle = req.body.postTitle;
+//   var expContent = req.body.postContent;
+//   var expDescr = req.body.postDesc;
 
-  var expObj = {
-    title: expTitle,
-    Description: expDescr,
-    content: expContent,
-  };
+//   var expObj = {
+//     title: expTitle,
+//     Description: expDescr,
+//     content: expContent,
+//   };
 
-  exps.push(expObj);
+//   exps.push(expObj);
 
-  res.redirect('/exps');
-});
+//   res.redirect('/exps');
+// });
 
 app.get('/post', (req, res) => {
   res.render('post.ejs', {
@@ -88,7 +89,7 @@ app.get('/post', (req, res) => {
 
 app.get('/exps', (req, res) => {
   res.render('exps.ejs', {
-    expObj: exps,
+    articles: experiments,
   });
 });
 
