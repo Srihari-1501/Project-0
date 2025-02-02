@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { experiments } from './views/utils/experiments.js';
+import { laws } from './views/utils/laws.js';
 
 // import { dirname } from "path";
 // import { fileURLToPath } from "url";
@@ -35,10 +36,6 @@ app.get('/', (req, res) => {
 
 app.get('/experiments', (req, res) => {
   res.render('compose.ejs');
-});
-
-app.get('/laws', (req, res) => {
-  res.render('partials/index.ejs');
 });
 
 app.get('/authors', (req, res) => {
@@ -90,6 +87,12 @@ app.get('/post', (req, res) => {
 app.get('/exps', (req, res) => {
   res.render('exps.ejs', {
     articles: experiments,
+  });
+});
+
+app.get('/law', (req, res) => {
+  res.render('laws.ejs', {
+    laws: laws,
   });
 });
 

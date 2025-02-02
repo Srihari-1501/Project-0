@@ -1,68 +1,64 @@
 const experiments = [
   {
-    title: 'Introduction to JavaScript',
-    description: 'Learn the basics of JavaScript programming.',
-    content: 'JavaScript is a versatile programming language used to create dynamic and interactive web applications.',
-    tags: ['programming', 'javascript', 'web development'],
-  },
-  {
-    title: 'The Benefits of Regular Exercise',
-    description: 'Discover why exercise is essential for a healthy lifestyle.',
-    content: 'Exercise helps improve physical fitness, boosts mental health, and reduces the risk of chronic diseases.',
-    tags: ['health', 'fitness', 'lifestyle'],
-  },
-  {
-    title: 'Understanding Node.js',
-    description: "A beginner's guide to Node.js and server-side JavaScript.",
-    content: 'Node.js is a runtime environment that allows developers to execute JavaScript code on the server.',
-    tags: ['programming', 'node.js', 'backend development'],
-  },
-  {
-    title: 'Healthy Eating Tips',
-    description: 'Simple tips for maintaining a balanced diet.',
-    content: 'Incorporating fruits, vegetables, and whole grains into your meals can greatly improve your diet.',
-    tags: ['health', 'nutrition', 'lifestyle'],
-  },
-  {
-    title: 'Advancing in React.js',
-    description: 'Explore advanced concepts in React.js development.',
+    title: 'Newton’s Second Law',
+    description: 'Investigate the relationship between force, mass, and acceleration.',
     content:
-      'React.js is a popular front-end library for building user interfaces. Learning hooks and context can enhance your skills.',
-    tags: ['programming', 'react.js', 'frontend development'],
+      'Experiment: Use a cart on a track with varying masses and apply different forces to measure acceleration.',
+    tags: ['Isaac Newton', 'Galileo Galilei'],
   },
   {
-    title: 'The Importance of Mental Health',
-    description: 'Why mental health awareness is critical in modern society.',
-    content:
-      'Taking care of your mental health is as important as your physical health. Practice mindfulness and seek support when needed.',
-    tags: ['health', 'mental health', 'lifestyle'],
+    title: 'Projectile Motion',
+    description: 'Study how objects move under the influence of gravity.',
+    content: 'Experiment: Launch a ball at different angles and measure its range to analyze projectile motion.',
+    tags: ['Galileo Galilei', 'Leonhard Euler'],
   },
   {
-    title: '10 Tips for Learning a New Programming Language',
-    description: 'Efficient strategies for mastering a programming language quickly.',
-    content: 'Consistent practice, working on projects, and studying documentation are key to learning a new language.',
-    tags: ['programming', 'education', 'self-improvement'],
+    title: 'Ohm’s Law',
+    description: 'Explore the relationship between voltage, current, and resistance.',
+    content: 'Experiment: Build a simple circuit with a resistor and measure voltage and current to verify Ohm’s Law.',
+    tags: ['Georg Ohm', 'James Clerk Maxwell'],
   },
   {
-    title: 'Benefits of Yoga',
-    description: 'How yoga can improve your physical and mental well-being.',
-    content:
-      "Yoga enhances flexibility, builds strength, and promotes relaxation. It's a great addition to any fitness routine.",
-    tags: ['health', 'fitness', 'yoga'],
+    title: 'Simple Harmonic Motion',
+    description: 'Understand oscillatory motion through a pendulum experiment.',
+    content: 'Experiment: Measure the period of a pendulum with different string lengths to verify the SHM equation.',
+    tags: ['Christiaan Huygens', 'Leonhard Euler'],
   },
   {
-    title: 'Exploring AI and Machine Learning',
-    description: 'An introduction to artificial intelligence and machine learning concepts.',
-    content:
-      'AI and machine learning are transforming industries by enabling systems to learn from data and make intelligent decisions.',
-    tags: ['technology', 'AI', 'machine learning'],
+    title: 'Laws of Reflection',
+    description: 'Investigate how light reflects off surfaces.',
+    content: 'Experiment: Use a mirror and a laser pointer to measure the angle of incidence and reflection.',
+    tags: ['Euclid', 'Alhazen'],
   },
   {
-    title: 'Understanding Cybersecurity Basics',
-    description: 'Protecting yourself and your data online.',
-    content:
-      'Cybersecurity involves safeguarding your digital information from unauthorized access or attacks. Always use strong passwords and update software regularly.',
-    tags: ['technology', 'cybersecurity', 'web development'],
+    title: 'Archimedes’ Principle',
+    description: 'Explore the concept of buoyancy in fluids.',
+    content: 'Experiment: Submerge objects in water and measure the displaced volume to determine buoyant force.',
+    tags: ['Archimedes', 'Daniel Bernoulli'],
+  },
+  {
+    title: 'Electromagnetic Induction',
+    description: 'Demonstrate how changing magnetic fields generate electric currents.',
+    content: 'Experiment: Move a magnet through a coil and measure the induced voltage using a multimeter.',
+    tags: ['Michael Faraday', 'James Clerk Maxwell'],
+  },
+  {
+    title: 'Double-Slit Experiment',
+    description: 'Observe the wave nature of light through interference patterns.',
+    content: 'Experiment: Shine a laser through two slits onto a screen and analyze the resulting pattern.',
+    tags: ['Thomas Young', 'Richard Feynman'],
+  },
+  {
+    title: 'Thermal Expansion of Metals',
+    description: 'Investigate how temperature affects the length of metal rods.',
+    content: 'Experiment: Heat a metal rod and measure its expansion using a dial gauge or ruler.',
+    tags: ['James Joule', 'Ludwig Boltzmann'],
+  },
+  {
+    title: 'Conservation of Momentum',
+    description: 'Verify the law of conservation of momentum in collisions.',
+    content: 'Experiment: Use a frictionless air track to study elastic and inelastic collisions between carts.',
+    tags: ['Isaac Newton', 'Hendrik Lorentz'],
   },
 ];
 

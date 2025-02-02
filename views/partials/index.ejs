@@ -1,8 +1,18 @@
 <%- include("header.ejs") %>
+<style>
+    .hero-section {
+        background-image: url("/images/BG.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+    }
+</style>
 <div class="hero-section">
     <div class="container">
         <h3 class="display-6 my-4 fw-bold">Welcome to Kin's Studio<br>Exploring the Wonders of Physics!</h3>
-        <p class="lead mb-4">Explore captivating articles that decode the universe and ignite curiosity. Join a community where discovery and inspiration meet science.</p>
+        <p class="lead mb-4 text-black">Explore captivating articles that decode the universe and ignite curiosity. Join a community where discovery and inspiration meet science.</p>
 
         <form id="search" class="my-5" action="/search" method="post">
             <input name="searchTitle" class="form-group search-bar" type="search" placeholder="Search for Articles" aria-label="Search">
@@ -10,7 +20,7 @@
         </form>
 
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4">
-            <a type="button" class="btn btn-custom" href="/Laws">Laws of Physics</a>
+            <a type="button" class="btn btn-custom" href="/law">Laws of Physics</a>
             <a type="button" class="btn btn-lightblue" href="/compose">Create your Article</a>
             <a type="button" class="btn btn-custom" href="/exps">View Experiments</a>
             <a type="button" class="btn btn-lightblue" href="/authors">About Authors</a>
