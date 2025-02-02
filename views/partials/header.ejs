@@ -1,91 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Physics App</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics App</title>
 
-        <link rel="stylesheet" href="css/style.css">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous">
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous">
-        </script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-            rel="stylesheet">
+    <style>
+        body {
+            background-color: #E3F2FD;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
 
-        
+        .nav-color {
+            background-color: #0A2647;
+        }
 
-    </head>
-    <body>
-      <div class="nav-color" >
+        .navbar-brand h2 {
+            color: #FFFFFF !important;
+            font-weight: 600;
+        }
+
+        .navbar-nav .nav-link {
+            color: #BBDEFB !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #64B5F6 !important;
+        }
+
+        .btn-outline-success {
+            background-color: #1976D2;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #1565C0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #0A2647 0%, #1976D2 100%);
+            color: #FFFFFF;
+            padding: 100px 0;
+            text-align: center;
+            min-height: 90vh;
+        }
+
+        .hero-section h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            color: #E3F2FD;
+        }
+
+        .search-bar {
+            width: 70%;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+        }
+
+        .search-btn {
+            background-color: #1976D2;
+            color: white;
+            border-radius: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #1565C0;
+        }
+
+        .btn-custom {
+            background-color: #42A5F5;
+            color: white;
+            border-radius: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #1E88E5;
+            transform: scale(1.05);
+        }
+
+        .btn-lightblue {
+            background-color: #64B5F6;
+            color: white;
+            border-radius: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-lightblue:hover {
+            background-color: #42A5F5;
+            transform: scale(1.05);
+        }
+        .footer-set {
+            background-color: #0A2647;
+            color: #FFFFFF;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-set p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-color">
         <nav class="navbar navbar-expand-lg nav-color">
-          <div class="container nav-color">
-            <a href="#" class="navbar-brand nav-color"><h2><span class="fw-bold nav-color" style="color: aliceblue;">Company Name</span></h2></a>
-            <button style="background-color: rgb(56, 117, 64);" class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" style="background-color: rgb(56, 117, 64);"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse nav-color" id="navbarSupportedContent">
-              
-              <ul class="navbar-nav ms-auto" subhead="nav-item" subhead="nav-item">
-                <li class="nav-item nav-color">
-                  <a style="color: aliceblue !important;" href="/" class="nav-link">Home</a>
-                </li>
-              </ul>
-              
-              <ul class="navbar-nav" subhead="nav-item">
-                <li class="nav-item nav-color" id="post">
-                  <a style="color: aliceblue !important;" href="/experiments" class="nav-link">Experiment</a>
-                </li> 
-              </ul>
-              <ul class="navbar-nav me-2" subhead="nav-item">
-                <li class="nav-item nav-color" id="post">
-                  <a style="color: aliceblue !important;" href="/laws" class="nav-link">Laws</a>
-                </li> 
-              </ul>
-              <ul class="navbar-nav" subhead="nav-item">
-                <li class="nav-item nav-color" id="compose">
-                  <a style="color: black !important;background-color: aliceblue;" href="/compose" class="font-bold px-3 btn-outline-success py-2 btn btn-light nav-link">Compose Artical</a>
-                </li>
-              </ul>
+            <div class="container">
+                <a href="#" class="navbar-brand"><h2><span class="fw-bold">Kin's Studio</span></h2></a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-              <!-- <ul class="navbar-nav" subhead="nav-item">
-                <li class="nav-item nav-color" id="post">
-                  <a style="color: aliceblue !important;" href="/post" class="nav-link">Post</a>
-                </li> 
-              </ul> -->
-
-              <!-- <ul class="navbar-nav " subhead="nav-item">
-                <li class="nav-item nav-color" id="search">
-                  <a style="color: aliceblue !important;" href="/search" class="nav-link">Search</a>
-                </li> 
-              </ul> -->
-              
-              <!-- <ul class="navbar-nav" subhead="nav-item">
-                <li class="nav-item nav-color" id="search">
-                  <form class="form-inline my-2 my-lg-0 nav-color" id="search" action="/search" method="POST">
-                    <input name="searchTitle" class="form-group mr-sm-2 search-bar" type="search" placeholder=" Search for Blog" aria-label="Search">
-                    <button class="btn my-2 my-sm-0" style="background-color: white !important;" type="submit">Search</button>
-                  </form>
-                </li> 
-              </ul> -->
-              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/experiments" class="nav-link">Experiment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/laws" class="nav-link">Laws</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/compose" class="btn btn-outline-success">Compose Article</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </nav>
-      </div>
-
+    </div>

@@ -42,7 +42,7 @@ app.get('/laws', (req, res) => {
 });
 
 app.get('/authors', (req, res) => {
-  res.render('partials/index.ejs');
+  res.render('author.ejs');
 });
 
 app.get('/compose', (req, res) => {
