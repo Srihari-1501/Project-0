@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { experiments } from './views/utils/experiments.js';
 import { laws } from './views/utils/laws.js';
+import { physicist } from './views/utils/Physicist.js';
 
 // import { dirname } from "path";
 // import { fileURLToPath } from "url";
@@ -10,6 +11,7 @@ const app = express();
 const port = 3000;
 var posts = [];
 var editTit, contEdit, descEdit, searchTit, contSearch, descSearch;
+console.log(physicist);
 
 app.use(express.static('public'));
 
@@ -93,6 +95,12 @@ app.get('/exps', (req, res) => {
 app.get('/law', (req, res) => {
   res.render('laws.ejs', {
     laws: laws,
+  });
+});
+
+app.get('/physicist', (req, res) => {
+  res.render('physicist.ejs', {
+    phys: physicist,
   });
 });
 
